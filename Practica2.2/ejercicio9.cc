@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <time.h>
 
-int main(){
+int main(int argc, char **argv){
   struct stat buf;
   int stati = stat(argv[1], &buf);
   printf("MAJOR: %li\n", (long) major(buf.st_dev));
